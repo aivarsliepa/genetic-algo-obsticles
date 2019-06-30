@@ -16,20 +16,31 @@ let finishPoint;
 
 let currentMove = 0;
 
+/**
+ * @type {Obsticle[]}
+ */
+const obsticles = [];
+
 function setup() {
   createCanvas(WIDTH, HEIGHT).parent("sketch-container");
-  startingPoint = new Point(200, 200, true, false);
-  finishPoint = new Point(WIDTH - 20, HEIGHT / 2, false, true);
+  startingPoint = new Point(10, 20, true, false);
+  finishPoint = new Point(WIDTH - 10, 20, false, true);
   population = new Population();
+
+  for (let i = 0; i < 25; i++) {
+    obsticles.push(new Obsticle(400, 0 + 20 * i));
+  }
 }
 
 function draw() {
   background(240);
+  obsticles.forEach(obsticle => obsticle.draw());
   startingPoint.draw();
   finishPoint.draw();
 
   population.update();
   population.draw();
+  // population.debugDrawFitnessScores();
 }
 
 // wrapper for dist
