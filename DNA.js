@@ -1,4 +1,4 @@
-const MUTATION_CHANCE = 0.005;
+const MUTATION_CHANCE = 0.01;
 
 // stuff that indentifies agents, in this game just directions they are making
 class DNA {

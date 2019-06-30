@@ -6,7 +6,7 @@ class Population {
      * @type {Agent[]}
      */
     this.agents = [];
-    this.trainRate = 10; // must positive integer
+    this.trainRate = 1; // must positive integer
     this.headlessMode = false;
 
     for (let i = 0; i < MAX_POPULATION; i++) {
