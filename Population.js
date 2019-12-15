@@ -103,7 +103,7 @@ class Population {
       for (let j = 20; j < HEIGHT; j += 80) {
         const debugAgent = new Agent();
         debugAgent.position = createVector(i, j);
-        debugAgent.movesTaken = 100;
+        debugAgent.movesTaken = currentMove;
         debugAgents.push(debugAgent);
       }
     }
