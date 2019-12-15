@@ -30,9 +30,9 @@ function setup() {
 
   resetPopulation();
 
-  // for (let i = 0; i < 25; i++) {
-  //   obsticles.push(new Obsticle(WIDTH / 2, 0 + 20 * i));
-  // }
+  for (let i = 0; i < 25; i++) {
+    obsticles.push(new Obsticle(WIDTH / 2, 0 + 20 * i));
+  }
 }
 
 function draw() {
